@@ -43,5 +43,6 @@ btnSignUp.addEventListener('click', function(event){
 });
 popupClose.addEventListener('click', function(event){
     popupSignUp.classList.remove('active-signup');
+    body.classList.remove('not-scroll');
     
 });
