@@ -9,6 +9,8 @@ let headerList = document.querySelector('.header__list');
 
 
 
+
+
 listTitle.forEach((element, index)=>{
     element.addEventListener('click', function(event){
         list[index].classList.toggle('active-list');
@@ -28,4 +30,18 @@ burger.addEventListener('click', function(event){
     }
 });
     
+  
+let btnSignUp = document.querySelector('.header__right-signup');
+let popupSignUp = document.querySelector('.popup-signup');
+let popupClose = document.querySelector('.popup-signup__close');
+let body = document.querySelector('body');
+
+btnSignUp.addEventListener('click', function(event){
+    event.preventDefault();
+    popupSignUp.classList.add('active-signup');
+    body.classList.add('not-scroll');
+});
+popupClose.addEventListener('click', function(event){
+    popupSignUp.classList.remove('active-signup');
     
+});
