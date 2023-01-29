@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&display=swap');
 
 @import "./helpers/RESET.scss";
+@import "./helpers/animate.scss";
+
 
 ////////////VARIABLES///////////////////////////
 $fontDMSans: 'DM Sans', sans-serif;
@@ -27,7 +29,9 @@ body{
     padding: 13px 25px;
     border-radius: 8px;
     color: #fff;
-    display: inline;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 300ms ease;
 }
 .green-button{
