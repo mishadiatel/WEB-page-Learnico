@@ -9,7 +9,7 @@ const animateFunc = function(entries, observer){
 }
 
 const makeAnimation = function(element, animName,  prefix = 'animate__'){
-    new Promise((resolve, reject) => {
+    new Promise((resolve, _) => {
         const animationName = `${prefix}${animName}`;
         
         element.classList.add(animationName);
