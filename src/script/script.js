@@ -1,12 +1,18 @@
-let list = document.querySelectorAll('.footer__list');
-let listTitle = document.querySelectorAll('.footer__pages-title');
-let allLists = document.querySelector('.footer__lists');
-let beforeHeader = document.querySelector('.beforeheader');
-let closeIcon = document.querySelector('.close-icon');
-let burger = document.querySelector('.burger');
-let burgerUse = document.querySelector('.burger use');
-let headerList = document.querySelector('.header__list');
+import { elObserver } from "./makeAnimation.js";
 
+const list = document.querySelectorAll('.footer__list');
+const listTitle = document.querySelectorAll('.footer__pages-title');
+const allLists = document.querySelector('.footer__lists');
+const beforeHeader = document.querySelector('.beforeheader');
+const closeIcon = document.querySelector('.close-icon');
+const burger = document.querySelector('.burger');
+const burgerUse = document.querySelector('.burger use');
+const headerList = document.querySelector('.header__list');
+const btnSignUp = document.querySelector('.header__right-signup');
+const popupSignUp = document.querySelector('.popup-signup');
+const popupClose = document.querySelector('.popup-signup__close');
+const body = document.querySelector('body');
+const animationElements = document.querySelectorAll('[data-animation]');
 
 
 
@@ -31,10 +37,6 @@ burger.addEventListener('click', function(event){
 });
     
   
-let btnSignUp = document.querySelector('.header__right-signup');
-let popupSignUp = document.querySelector('.popup-signup');
-let popupClose = document.querySelector('.popup-signup__close');
-let body = document.querySelector('body');
 
 btnSignUp.addEventListener('click', function(event){
     event.preventDefault();
@@ -46,3 +48,23 @@ popupClose.addEventListener('click', function(event){
     body.classList.remove('not-scroll');
     
 });
+// const scrollIsDown = function(){
+//     let last_known_scroll_position = 0;
+
+//     window.addEventListener('scroll', function(e) {
+//         let current_scroll_position = window.scrollY;
+
+//         if (current_scroll_position > last_known_scroll_position) {
+//             // console.log("Scrolled down");
+//             return true;
+//         } else {
+//             return false;
+//             // console.log("Scrolled up");
+//         }
+//         last_known_scroll_position = current_scroll_position;
+//     });
+// }
+
+animationElements.forEach(el => elObserver.observe(el));
+
+
