@@ -48,22 +48,6 @@ popupClose.addEventListener('click', function(event){
     body.classList.remove('not-scroll');
     
 });
-// const scrollIsDown = function(){
-//     let last_known_scroll_position = 0;
-
-//     window.addEventListener('scroll', function(e) {
-//         let current_scroll_position = window.scrollY;
-
-//         if (current_scroll_position > last_known_scroll_position) {
-//             // console.log("Scrolled down");
-//             return true;
-//         } else {
-//             return false;
-//             // console.log("Scrolled up");
-//         }
-//         last_known_scroll_position = current_scroll_position;
-//     });
-// }
 
 animationElements.forEach(el => elObserver.observe(el));
 
